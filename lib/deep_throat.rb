@@ -14,11 +14,7 @@ module DeepThroat
   end
   
   def self.successful_url(path)
-    if call_url(root_url(path)).class.to_s == "Net::HTTPOK"
-      true
-    else
-      false
-    end
+    call_url(root_url(path)).class.to_s == "Net::HTTPOK"
   end
   
   def self.call_url(path)
